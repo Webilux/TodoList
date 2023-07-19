@@ -1,0 +1,83 @@
+@use "./mixins" as mixin;
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: var(--bg-1);
+  @include mixin.xs {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h3 {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  font-family: var(--font-family);
+}
+
+.input-error:focus {
+  outline: 2px solid #e74c3c;
+}
+
+::placeholder {
+  font-family: var(--font-family);
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #fff;
+  &:focus {
+    outline: none;
+  }
+}
+
+select option {
+  background-color: #fff;
+  color: var(--gray-1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #363645;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f51;
+}

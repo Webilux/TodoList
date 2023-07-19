@@ -1,0 +1,103 @@
+@use "../../../assets/styles/mixins" as mixin;
+
+main {
+  transition: margin-left 0.4s ease;
+  .container {
+    max-width: 750px;
+    padding: 45px 30px;
+    @include mixin.xs {
+      padding: 25px 30px 45px 30px;
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: 25px;
+      color: white;
+    }
+    .headTitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          border: none;
+          background: var(--bg-2);
+          padding: 9px;
+          border-radius: 15px;
+          &:nth-child(1) {
+            @include mixin.xs {
+              display: none;
+            }
+            @include mixin.sm {
+              display: none;
+            }
+          }
+          &:nth-child(2) {
+            display: none;
+            @include mixin.xs {
+              display: initial;
+            }
+            @include mixin.sm {
+              display: initial;
+            }
+          }
+        }
+      }
+      i {
+        font-size: 24px;
+        cursor: pointer;
+        transition: 0.2s opacity;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+.actionMenu {
+  width: 130px;
+  align-self: end;
+  transition: all 0.2s;
+}
+
+.sidebarActive {
+  margin-left: 260px;
+  transition: margin-left 0.4s ease;
+  @include mixin.xs {
+    margin-left: 0;
+  }
+  @include mixin.sm {
+    margin-left: 0;
+  }
+}
+
+.addTodoList {
+  position: fixed;
+  display: flex;
+  bottom: 20px;
+  z-index: 2;
+  box-shadow: var(--boxshadow);
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    z-index: -1;
+    background: var(--gradient);
+    filter: blur(10px);
+    border-radius: 19px;
+  }
+  i {
+    padding: 15px;
+    font-weight: 900;
+    font-size: 22px;
+    border-radius: 19px;
+    color: white;
+    background: var(--gradient);
+    opacity: 1;
+  }
+}

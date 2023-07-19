@@ -1,0 +1,20 @@
+:root {
+  --primary: #fc76a1;
+  --secondary: #ad68e5;
+  --tertiary: #70c4bf;
+  --quaternary: #fa9e61;
+  --quinary: #1d7caf;
+  --bg-1: #181820;
+  --bg-2: #21212b;
+  --bg-3: #272732;
+  --text-color: #bcbcbf;
+  --font-family: "Manrope", sans-serif;
+  --gradient: linear-gradient(
+    50deg,
+    rgba(165, 56, 187, 1) 0%,
+    rgba(247, 116, 178, 1) 50%,
+    rgba(249, 151, 126, 1) 100%
+  );
+  --box-shadow: #13131a 0px 2px 5px -1px;
+  --box-shadow-invert: #13131a 0px -2px 5px -1px;
+}

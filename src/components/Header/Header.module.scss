@@ -1,0 +1,61 @@
+@use "../../assets/styles/mixins" as mixin;
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background: var(--bg-2);
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+  @include mixin.xs {
+    display: none;
+  }
+  @include mixin.sm {
+    display: none;
+  }
+
+  ul:last-child {
+    li {
+      padding: 0 7.5px;
+      &:first-child {
+        i {
+          padding: 6px;
+          font-weight: 900;
+          font-size: 16px;
+          border-radius: 11px;
+          color: white;
+          background: var(--gradient);
+          opacity: 1;
+        }
+      }
+      &:last-child {
+        padding-right: 7px;
+      }
+    }
+  }
+
+  ul:last-child,
+  ul:first-child {
+    li:first-child {
+      opacity: 1;
+      transition: opacity 0.2s;
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 0 5px;
+    opacity: 0.5;
+    i {
+      font-size: 21px;
+    }
+  }
+}

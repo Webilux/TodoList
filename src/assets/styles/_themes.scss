@@ -1,0 +1,90 @@
+.btn {
+  padding: 6px;
+  border-radius: 11px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s opacity;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+.btn-tertiary {
+  background-color: var(--tertiary);
+  border: 1px solid var(--tertiary);
+}
+
+.btn-reverse-primary {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-reverse-secondary {
+  background-color: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.btn-reverse-tertiary {
+  background-color: transparent;
+  border: 2px solid var(--tertiary);
+  color: var(--tertiary);
+}
+
+.card {
+  border-radius: 14px;
+  background-color: var(--bg-2);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+input,
+select {
+  border-radius: 19px;
+  border: 2px solid var(--bg-2);
+  background: var(--bg-1);
+  padding: 16px 15px;
+  color: white;
+  transition: box-shadow 0.2s;
+  &::placeholder {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 2px 1.5px var(--bg-2);
+  }
+}
+
+.selected {
+  outline: 2px solid var(--primary);
+  border-radius: 4px;
+  transition: 0.2s outline;
+}
+
+li {
+  cursor: pointer;
+}
+
+.select-primary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.select-secondary {
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+}

@@ -1,0 +1,18 @@
+@use "../../assets/styles/mixins" as mixin;
+
+footer {
+  background: var(--bg-2);
+  box-shadow: var(--box-shadow-invert);
+  transition: margin-left 0.4s ease;
+}
+
+.sidebarActive {
+  margin-left: 260px;
+  transition: margin-left 0.4s ease;
+  @include mixin.xs {
+    margin-left: 0;
+  }
+  @include mixin.sm {
+    margin-left: 0;
+  }
+}
